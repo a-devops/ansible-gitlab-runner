@@ -943,3 +943,11 @@
   when:
     - gitlab_runner.extra_configs is defined
     - gitlab_runner.extra_configs|list|length > 0
+
+#### extra config section #####
+- name: Add extra_config_raw
+  ansible.builtin.blockinfile:
+    path: "{{ temp_runner_config.path }}"
+    block: "{{ gitlab_runner.extra_config_raw }}"
+  when:
+    - gitlab_runner.extra_config_raw is defined
