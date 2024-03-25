@@ -749,6 +749,7 @@
     insertafter: ^\s*\[runners\.ssh\]
     backrefs: false
   check_mode: false
+  when: gitlab_runner.executor == 'ssh'
   no_log: "{{ gitlab_runner_no_log_secrets | default(omit) }}"
   notify:
     - restart_gitlab_runner
@@ -763,6 +764,7 @@
     insertafter: ^\s*\[runners\.ssh\]
     backrefs: false
   check_mode: false
+  when: gitlab_runner.executor == 'ssh'
   no_log: "{{ gitlab_runner_no_log_secrets | default(omit) }}"
   notify:
     - restart_gitlab_runner
@@ -777,6 +779,7 @@
     insertafter: ^\s*\[runners\.ssh\]
     backrefs: false
   check_mode: false
+  when: gitlab_runner.executor == 'ssh'
   no_log: "{{ gitlab_runner_no_log_secrets | default(omit) }}"
   notify:
     - restart_gitlab_runner
@@ -791,6 +794,7 @@
     insertafter: ^\s*\[runners\.ssh\]
     backrefs: false
   check_mode: false
+  when: gitlab_runner.executor == 'ssh'
   no_log: "{{ gitlab_runner_no_log_secrets | default(omit) }}"
   notify:
     - restart_gitlab_runner
@@ -805,6 +809,7 @@
     insertafter: ^\s*\[runners\.ssh\]
     backrefs: false
   check_mode: false
+  when: gitlab_runner.executor == 'ssh'
   no_log: "{{ gitlab_runner_no_log_secrets | default(omit) }}"
   notify:
     - restart_gitlab_runner
